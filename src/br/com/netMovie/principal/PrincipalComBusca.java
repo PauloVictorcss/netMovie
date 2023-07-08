@@ -25,7 +25,7 @@ public class PrincipalComBusca {
         List<Titulo> titulos = new ArrayList<>();
 
         Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE) //serve para reconhecer a letra minuscula
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE) 
                 .setPrettyPrinting()
                 .create();
 
@@ -53,11 +53,11 @@ public class PrincipalComBusca {
                 String json = response.body();
                 System.out.println(json);
 
-                TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class); //fiz uma record para traduzir
+                TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class); 
                 System.out.println(meuTituloOmdb);
 
 
-                Titulo meuTitulo = new Titulo(meuTituloOmdb);   //fiz um construtor e joguei essa variável lá dentro
+                Titulo meuTitulo = new Titulo(meuTituloOmdb);  
                 System.out.println("Titulo ja convertido");
                 System.out.println(meuTitulo);
 
